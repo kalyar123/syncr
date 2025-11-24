@@ -1,0 +1,165 @@
+/* @import "tailwindcss";
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.tw-grid-table .e-gridheader {
+  @apply bg-gray-200 border-b border-gray-200;
+}
+
+.tw-grid-table .e-headercell {
+  @apply font-semibold text-gray-700 text-sm bg-gray-100;
+}
+
+.tw-grid-table .e-rowcell {
+  @apply text-gray-800 text-sm py-3;
+}
+
+.tw-grid-table .e-gridcontent .e-row {
+  @apply border-b border-gray-200;
+}
+
+.tw-grid-table .e-grid {
+  border: none !important;
+}
+
+.tw-grid-table .e-pager {
+  @apply bg-white border-t border-gray-200;
+}
+
+.tw-grid-table .e-row:hover td {
+  @apply bg-gray-50;
+} */
+
+
+
+
+@import "tailwindcss";
+
+/* Theme Variables */
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* ---------------------------------------------------------
+   SYNCFUSION GRID - CUSTOM TAILWIND UI MATCHING IMAGE
+   --------------------------------------------------------- */
+
+/* GRID WRAPPER */
+.tw-grid-table .e-grid {
+  border: 1px solid #e5e7eb !important;
+  border-radius: 12px !important;
+  overflow: hidden !important;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+
+/* HEADER AREA */
+.tw-grid-table .e-gridheader {
+  @apply bg-white border-b border-gray-200;
+}
+
+/* HEADER CELLS */
+.tw-grid-table .e-headercell {
+  @apply font-semibold text-gray-700 text-sm bg-gray-100 border-gray-200;
+  padding: 12px 16px !important;
+}
+
+/* SORT ICONS SIZE FIX */
+.tw-grid-table .e-headercelldiv .e-sortfilterdiv {
+  margin-left: 6px !important;
+  transform: scale(1.1);
+}
+
+/* ROW STYLING */
+.tw-grid-table .e-rowcell {
+  @apply text-gray-800 text-sm;
+  padding: 14px 16px !important;
+  border-bottom: 1px solid #e5e7eb !important;
+}
+
+/* LAST ROW: REMOVE BORDER */
+.tw-grid-table .e-row:last-child .e-rowcell {
+  border-bottom: none !important;
+}
+
+/* ROW HOVER */
+.tw-grid-table .e-row:hover td {
+  background-color: #f9fafb !important;
+}
+
+/* GRID CONTENT */
+.tw-grid-table .e-gridcontent {
+  background-color: white !important;
+}
+
+/* PAGER */
+.tw-grid-table .e-pager {
+  @apply bg-white border-t border-gray-200;
+  padding: 14px 12px !important;
+  font-size: 14px;
+}
+
+/* PAGER BUTTONS */
+.tw-grid-table .e-pager .e-numericitem,
+.tw-grid-table .e-pager .e-next,
+.tw-grid-table .e-pager .e-prev {
+  border-radius: 8px !important;
+  margin: 0 4px !important;
+  padding: 6px 10px !important;
+}
+
+/* ACTIVE PAGE */
+.tw-grid-table .e-pager .e-currentitem {
+  background: #4f46e5 !important;
+  color: white !important;
+  border-color: #4f46e5 !important;
+}
+
+/* FILTER ICON */
+.tw-grid-table .e-filtermenudiv {
+  transform: scale(1.15);
+  margin-left: 6px;
+}
