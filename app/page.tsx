@@ -8,12 +8,13 @@ import {
   Sort,
   Filter,
   Group,
+  FilterSettingsModel,
 } from "@syncfusion/ej2-react-grids";
 import { data } from "./datasource";
 
 export default function Home() {
   const pageSettings = { pageSize: 6 };
-  const filterSettings = { type: "Excel" };
+  const filterSettings: FilterSettingsModel = { type: "Excel" };
 
   return (
     <div className="mt-10 bg-white p-4 rounded-xl shadow-sm border border-gray-200">
